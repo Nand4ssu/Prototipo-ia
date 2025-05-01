@@ -1,0 +1,125 @@
+/*É possível criar uma váriavel para armazenar as cores que vamos utilizar no site, ao invés de ficar
+digitando o rgb por completo.*/
+:root {
+  --main-color: #3d5da1; 
+  --cor-sec: #8fa5cf; /*Se houver degradê, irei utilizar ambas.*/
+  --corbg: #454f8a;
+  --cor-menu: #000000;
+  /*Padrão de borda que vamos utilizar*/
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  /*Font size padrão.*/
+  font-size: 10px;
+  --white: #ffffff;
+}
+
+/*Criando um código padrão de Section */
+section{
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  /*O text-transform: capitalize diz que queremos que tdos os textos comecem com letra maiúscula*/
+  text-transform: capitalize;
+  /*Aplicando uma transição, para quando formos passar o mouse em cima, ele tenha uma transição bonita e rápida. */
+  transition: 0.2s linear;
+  /*Resetando */
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background-color: var(--cor-menu);
+}
+.menu{
+  position: fixed;
+  /*Vamos utilizar o fixed, para que quando rolarmos pela página o menu sempre fique acompanhando e nunca suma.*/
+  top: 0;
+  left: 0;
+  right: 0;
+  /*O z-index define quem vai ficar na frente de quem, então ao colocar ele
+  sempre deixa o header na frente de tudo.*/
+  z-index: 99;
+  border-bottom: var(--border);
+}
+
+/*Estlizando os itens dentro do header.*/
+.menu section{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 0.7rem;
+  background-color: #000000;
+  padding-bottom: 0.1rem;
+}
+
+/*Arrumando a imagem para parecer um logo*/
+.logo img{
+  width: 85px;
+  height: auto;
+  object-fit: contain;
+  /*O object-fit é utilizado para imagens e vídeos, quando queremos que o conteúdo se encaixe inteiro dentro da 
+  caixa que eu defini (com o width e height), sem cortar e deformar a imagem. */
+}
+.navbar a{
+  margin: 0 1rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+
+}
+
+.navbar a:hover{
+  color: var(--corbg);
+  border-bottom: 0.1rem solid var(--main-color);
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+
+}
+
+.btn{
+  background: var(--cor-sec);
+  color: var(--white);
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin-top: 1rem ;
+  display:  inline-block ;
+} 
+
+/* Usamos rem para que o espaçamento se ajuste automaticamente 
+conforme o tamanho da fonte raiz(root que definimos no começo do código), tornando o site mais responsivo e acessível */
+
+.home-container{
+  background: url("./imgs/fundo.png");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  /*O cover no bg, está "falando" que a imagem irá cobrir tudo*/
+
+}
+
+.home-container section{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.content{
+  max-width: 60rem;
+}
+.content h3{
+  color:var(--white);
+  font-size: 6rem;
+}
+.content p{
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.8;
+  /*Line-height = altura da linha*/
+  padding: 1rem 0;
+}

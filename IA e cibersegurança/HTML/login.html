@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Orion</title>
+        <meta charset="UTF-8"/>
+        
+        <link rel="stylesheet" type="text/css" href="./login.css">
+
+        <script src="./login.js"></script>
+        <!--Trazendo um framework -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <div class="container-principal">
+            <div class="formulario">
+                <form id="form-login" onsubmit="logar(event)">
+                    <h1>Login</h1>
+
+                    <input type="text" placeholder="Digite o seu usuário:" id="usuario" required="true" minlength="3" maxlength="15"/>
+
+                    <input type="password" placeholder="Digite sua senha:" id="senha" required="true" minlength="4" maxlength="15"/>
+                    <br>
+                    <a href="../Cadastro/cadastro.html">Não possui uma conta?</a>
+                    <br>
+                    <input type="submit" value="Entrar" onclick="logar();return false"/>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
